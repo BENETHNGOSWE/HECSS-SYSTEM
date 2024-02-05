@@ -18,6 +18,9 @@ Route::get('/', function () {
 });
 
 
+// Homepage Manage
+Route::get('homepage', [App\Http\Controllers\Frontend\FrontpageController::class,'index'])->name('homepage');
+
 
 
 // Program Manage Here
