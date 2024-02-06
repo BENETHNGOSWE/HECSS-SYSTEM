@@ -1,4 +1,4 @@
 @extends('frontend.main')
 @section('content')
-<h3>Testing template</h3>
+@include('frontend/home')
 @endsection
