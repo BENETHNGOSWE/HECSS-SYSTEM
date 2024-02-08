@@ -24,11 +24,11 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('student.programs')}}">Career Trends</a>
+                    <a class="nav-link" href="{{ route('student.programs')}}">Program Check</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link click-scroll" href="{{ route('search.results')}}">Feedback</a>
+                    <a class="nav-link click-scroll" href="{{ route('search.results')}}">Career Trends</a>
                 </li>
 
                 <li class="nav-item">
