@@ -58,8 +58,8 @@ class CareererController extends Controller
     public function search_program(Request $request){
         $program = $request->program;
         $careers = CareerOpportunity::where(function ($query) use ($program){
-            $query->where('carrier_name', 'like',"%$program%")
-            ->orWhere("career_description", "like","$program");
+            $query->where('carrier_name', 'ILIKE',"%$program%")
+            ->orWhere("career_description", "ILIKE","$program");
         })
         ->orWhereHas("programto_studies", function ($query) use ($program){
             $query->where('program_name', 'ILIKE', "%$program%");

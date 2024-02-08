@@ -13,10 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/homepage', function () {
     return view('welcome');
 });
 
+
+// Homepage Manage
+Route::get('/', [App\Http\Controllers\Frontend\FrontpageController::class,'index'])->name('homepage');
 
 
 
