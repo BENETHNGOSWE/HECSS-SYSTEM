@@ -16,7 +16,7 @@
         <div class="collapse navbar-collapse" >
             <ul class="navbar-nav ms-lg-5 me-lg-auto">
                 <li class="nav-item">
-                    <a class="nav-link click-scroll" href="#section_1">Home</a>
+                    <a class="nav-link" href="{{ route('homepage')}}">Home</a>
                 </li>
 
                 <li class="nav-item">
@@ -28,7 +28,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link click-scroll" href="{{ route('search.results')}}">Career Trends</a>
+                    <a class="nav-link" href="{{ route('careerer.index')}}">Career Trends</a>
                 </li>
 
                 <li class="nav-item">
