@@ -26,15 +26,14 @@
 
         </div>
     </div>
-</section>
+</section><br>
 <div class="container">
-    <table class="table">
+    {{-- <table class="table">
         <thead>
             <tr>
                 <th>Name</th>
                 <th>Description</th>
                 <th>Program</th>
-                <!-- Add more table headings for other fields if needed -->
             </tr>
         </thead>
         <tbody>
@@ -43,10 +42,33 @@
                 <td>{{ $career->carrier_name }}</td>
                 <td>{{ $career->career_description }}</td>
                 <td>{{ $career->programto_studies->program_name }}</td>
-                <!-- Add more table cells for other fields if needed -->
             </tr>
             @endforeach
         </tbody>
-    </table>
+    </table> --}}
+
+    <div class="container">
+        <div class="row">
+            @foreach($careers as $career)
+            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                <div class="custom-block bg-white shadow-lg">
+                    <a href="topics-detail.html">
+                        <div class="d-flex">
+                            <div>
+                                <h5 class="mb-2">{{ $career->carrier_name }}</h5>
+        
+                                    <p class="mb-0">{{ $career->career_description }}</p>
+                            </div>
+        
+                            <span class="badge bg-design rounded-pill ms-auto">75</span>
+                        </div>
+        
+                        <img src="frontend/assets/images/topics/undraw_Redesign_feedback_re_jvm0.png" class="custom-block-image img-fluid" alt="">
+                    </a>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
 </div>
 @endsection
