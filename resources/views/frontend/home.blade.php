@@ -58,5 +58,6 @@
                 </div>
             </div>
             @endforeach
+            {{-- <livewire:comments :model="$career"/> --}}
         </div>
 </section>
