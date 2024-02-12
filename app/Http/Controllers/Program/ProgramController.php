@@ -32,10 +32,9 @@ class ProgramController extends Controller
     public function validate_program(Request $request){
         return $request ->validate([
             'program_name'=> 'required',
-            'program_description'=> 'required',
+            'program_description'=> 'required|string|max:5000',
             'program_yearof_study'=> 'required',
-            'program_grade_min'=> 'nullable|numeric',
-            'program_grade_max'=> 'nullable|numeric',
+            'program_division'=>'required',
             'universityID'=> 'required|exists:universities,id',
             
         ]);

@@ -13,25 +13,76 @@ class StudentResultSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 1; $i <= 10; $i++) {
-            StudentResults::create([
-                'student_number' => '001/2020/' . str_pad($i, 3, '0', STR_PAD_LEFT),
-                'physics_grade' => $this->generateGrade(),
-                'math_grade' => $this->generateGrade(),
-                'civics_grade' => $this->generateGrade(),
-                'kiswahili_grade' => $this->generateGrade(),
-                'english_grade' => $this->generateGrade(),
-                'chemistry_grade' => $this->generateGrade(),
-                'history_grade' => $this->generateGrade(),
-                'student_grade' => rand(10, 100), // Example range, adjust as needed
-            ]);
-        }
+        StudentResults::create([
+            'student_number' => '5180/0001/2018',
+            'physics_grade' => 'F',
+            'math_grade' => 'F',
+            'civics_grade' => 'C',
+            'kiswahili_grade' => 'D',
+            'english_grade' => 'D',
+            'chemistry_grade' => 'D',
+            'history_grade' => 'F',
+            'student_grade' => 28,
+            'student_division' => 'IV',
+        ]);
+
+        StudentResults::create([
+            'student_number' => 'S5180/0002/2018',
+            'physics_grade' => 'A',
+            'math_grade' => 'B',
+            'civics_grade' => 'B',
+            'kiswahili_grade' => 'C',
+            'english_grade' => 'A',
+            'chemistry_grade' => 'B',
+            'history_grade' => 'A',
+            'student_grade' => 12,
+            'student_division' => 'I',
+        ]);
+
+        StudentResults::create([
+            'student_number' => 'S5180/0003/2018',
+            'physics_grade' => 'C',
+            'math_grade' => 'D',
+            'civics_grade' => 'B',
+            'kiswahili_grade' => 'C',
+            'english_grade' => 'C',
+            'chemistry_grade' => 'C',
+            'history_grade' => 'B',
+            'student_grade' => 18,
+            'student_division' => 'II',
+        ]);
+
+        StudentResults::create([
+            'student_number' => 'S5180/0004/2018',
+            'physics_grade' => 'A',
+            'math_grade' => 'A',
+            'civics_grade' => 'A',
+            'kiswahili_grade' => 'A',
+            'english_grade' => 'A',
+            'chemistry_grade' => 'A',
+            'history_grade' => 'B',
+            'student_grade' => 7,
+            'student_division' => 'I',
+        ]);
+
+        StudentResults::create([
+            'student_number' => 'S5180/0005/2018',
+            'physics_grade' => 'C',
+            'math_grade' => 'F',
+            'civics_grade' => 'D',
+            'kiswahili_grade' => 'B',
+            'english_grade' => 'D',
+            'chemistry_grade' => 'A',
+            'history_grade' => 'C',
+            'student_grade' => 24,
+            'student_division' => 'III',
+        ]);
     }
 
-    private function generateGrade()
-    {
-        $grades = ['A', 'B', 'C', 'D', 'E', 'F']; // Example grades, adjust as needed
-        return $grades[rand(0, count($grades) - 1)];
-    }
+    // private function generateGrade()
+    // {
+    //     $grades = ['A', 'B', 'C', 'D', 'E', 'F']; // Example grades, adjust as needed
+    //     return $grades[rand(0, count($grades) - 1)];
+    // }
 
 }

@@ -42,18 +42,23 @@
             @foreach($careers as $career)
             <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
                 <div class="custom-block bg-white shadow-lg">
-                    <a href="topics-detail.html">
+                    <a href="{{ route('careerer.show', $career)}}">
                         <div class="d-flex">
                             <div>
                                 <h5 class="mb-2">{{ $career->carrier_name }}</h5>
         
-                                    <p class="mb-0">{{ $career->career_description }}</p>
+                                    {{-- <p class="mb-0">{{ $career->career_description }}</p> --}}
                             </div>
         
-                            <span class="badge bg-design rounded-pill ms-auto">75</span>
+                            <span class="badge bg-design rounded-pill ms-auto"></span>
                         </div>
         
                         <img src="frontend/assets/images/topics/undraw_Redesign_feedback_re_jvm0.png" class="custom-block-image img-fluid" alt="">
+                        <div class="d-flex align-items-center">
+                            <a href="{{ route('careerer.show', $career)}}" class="btn custom-btn custom-border-btn smoothscroll">Read More</a>
+        
+                            
+                        </div>
                     </a>
                 </div>
             </div>

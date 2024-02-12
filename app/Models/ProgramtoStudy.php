@@ -23,8 +23,9 @@ class ProgramtoStudy extends Model
         return $this->hasMany(CareerOpportunity::class, "program_id");
     }
 
-    public function universities(){
-        return $this->hasMany(University::class);
+    public function university()
+    {
+        return $this->belongsTo(University::class, 'universityID');
     }
 }
 

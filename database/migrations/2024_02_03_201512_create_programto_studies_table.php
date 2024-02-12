@@ -14,10 +14,9 @@ return new class extends Migration
         Schema::create('programto_studies', function (Blueprint $table) {
             $table->id();
             $table->string('program_name');
-            $table->string('program_description');
+            $table->longText('program_description');
             $table->string('program_yearof_study');
-            $table->integer('program_grade_min')->nullable();
-            $table->integer('program_grade_max')->nullable();
+            $table->string('program_division')->nullable();
             $table->foreignId('universityID')->references('id')->on('universities')->onDelete('cascade');
             $table->timestamps();
         });

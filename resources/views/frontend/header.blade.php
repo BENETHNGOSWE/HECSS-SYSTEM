@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg">
     <div class="container">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="{{ route('homepage')}}">
             <i class="bi-back"></i>
             <span>Topic</span>
         </a>
@@ -31,9 +31,7 @@
                     <a class="nav-link" href="{{ route('careerer.index')}}">Career Trends</a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link click-scroll" href="#section_5">Contact</a>
-                </li>
+                
 
                 <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
@@ -47,7 +45,7 @@
             </ul>
 
             <div class="d-none d-lg-block">
-                <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                <a href="{{ route('register')}}" class="navbar-icon bi-person smoothscroll"></a>
             </div>
         </div>
     </div>

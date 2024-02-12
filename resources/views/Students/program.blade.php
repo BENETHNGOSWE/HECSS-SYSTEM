@@ -44,14 +44,16 @@
                         <thead>
                             <tr>
                                 <th style="border: 1px solid white; padding: 8px;">Program Name</th>
-                                <th style="border: 1px solid white; padding: 8px;">Program Name</th>
+                                <th style="border: 1px solid white; padding: 8px;">Program University</th>
                             </tr>
                         </thead>
                         <tbody>
                             @forelse ($suggestedPrograms as $program)
                                 <tr>
                                     <td style="border: 1px solid white; padding: 8px;">{{ $program->program_name }}</td>
-                                    <td style="border: 1px solid white; padding: 8px;">{{ $program->program_name }}</td>
+                                    <td style="border: 1px solid white; padding: 8px;">
+                                       <a href="{{ route('student.programs_university', $program)}}"> <button class="btn btn-primary">See University</button> </a>
+                                    </td>
                                 </tr>
                             @empty
                                 <tr>

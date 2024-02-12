@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Student;
 use App\Http\Controllers\Controller;
 use App\Models\ProgramtoStudy;
 use App\Models\StudentResults;
+use App\Models\University;
 use Illuminate\Http\Request;
 
 class StudentresultsController extends Controller
@@ -48,12 +49,22 @@ class StudentresultsController extends Controller
         // Filter programs based on grade requirements
         $suggestedPrograms = $programs->filter(function ($program) use ($studentResult) {
             // Compare student's grade with program grade requirements
-            return $studentResult->student_grade >= $program->program_grade_min && $studentResult->student_grade <= $program->program_grade_max;
+            // return $studentResult->student_grade >= $program->program_grade_min && $studentResult->student_grade <= $program->program_grade_max;
+            return $studentResult->student_division >= $program->program_division;
         });
     
         // Return suggested programs to the user
         return view('Students.program')->with('suggestedPrograms', $suggestedPrograms);
     }
+
+    public function showuniversity(ProgramtoStudy $program){
+        $this->data['university'] = $program->university;
+        $this->data['programs'] = $program;
+        return view('Students.showuniversity', $this->data);
+    }
+
+
+   
 
     
 }

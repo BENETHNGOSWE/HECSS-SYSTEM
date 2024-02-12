@@ -31,7 +31,7 @@ class CareererController extends Controller
     public function validate_careerer(Request $request){
         return $request->validate([
             'carrier_name'=> 'required',
-            'career_description'=> 'required',
+            'career_description'=> 'required|string|max:5000',
             'program_id'=> 'required|exists:programto_studies,id',
         ]);
     }
@@ -69,5 +69,10 @@ class CareererController extends Controller
 
         return view('Careerers.index', compact('careers', 'program'));
        
+    }
+
+    public function show(CareerOpportunity $career_opportunities){
+        $this->data['careers'] = $career_opportunities;
+        return view('Careerers.show', $this->data);
     }
 }

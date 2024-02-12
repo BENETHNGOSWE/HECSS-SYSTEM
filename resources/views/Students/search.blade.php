@@ -83,6 +83,10 @@
             <td style="color: #ffffff; border: 1px solid #ffffff; padding: 8px;">Student Grade</td>
             <td style="color: #ffffff; border: 1px solid #ffffff; padding: 8px;">{{ $studentResult->student_grade }}</td>
         </tr>
+        <tr style="background-color: #222222;">
+            <td style="color: #ffffff; border: 1px solid #ffffff; padding: 8px;">Student Division</td>
+            <td style="color: #ffffff; border: 1px solid #ffffff; padding: 8px;">{{ $studentResult->student_division }}</td>
+        </tr>
     </tbody> 
 </table>
 

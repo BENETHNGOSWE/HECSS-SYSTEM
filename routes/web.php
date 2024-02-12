@@ -46,6 +46,7 @@ Route::post('store/program', [App\Http\Controllers\Program\ProgramController::cl
 // Student Program Selected with Manage
 Route::get('/searchresults', [App\Http\Controllers\Student\StudentresultsController::class, 'search'])->name('search.results');
 Route::post('/studentprogram', [App\Http\Controllers\Student\StudentresultsController::class, 'student_program'])->name('student.programs');
+Route::get('/programuniversity/{program}/', [App\Http\Controllers\Student\StudentresultsController::class, 'showuniversity'])->name('student.programs_university');
 
 Route::get('/studentprogram', function () {
     return view('Students.program');
@@ -58,3 +59,4 @@ Route::get('/careerlist', [App\Http\Controllers\Careeries\CareererController::cl
 Route::get('/createcareer', [App\Http\Controllers\Careeries\CareererController::class,'create'])->name('careerer.create');
 Route::post('/storecareer', [App\Http\Controllers\Careeries\CareererController::class,'store'])->name('careerer.store');
 Route::get('/careerprogram', [App\Http\Controllers\Careeries\CareererController::class,'search_program'])->name('careerer.program');
+Route::get('/showcareerdetails/{career_opportunities}', [App\Http\Controllers\Careeries\CareererController::class,'show'])->name('careerer.show');

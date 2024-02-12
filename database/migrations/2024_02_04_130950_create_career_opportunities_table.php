@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('career_opportunities', function (Blueprint $table) {
             $table->id();
             $table->string('carrier_name');
-            $table->string('career_description');
+            $table->longText('career_description');
             $table->foreignId('program_id')->references('id')->on('programto_studies')->onDelete('cascade');
             $table->timestamps();
 
