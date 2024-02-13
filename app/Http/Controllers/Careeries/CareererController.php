@@ -65,6 +65,8 @@ class CareererController extends Controller
             $query->where('program_name', 'ILIKE', "%$program%");
         })
         ->get();
+
+
         return view('Careerers.index', compact('careers', 'program'));
        
     }
