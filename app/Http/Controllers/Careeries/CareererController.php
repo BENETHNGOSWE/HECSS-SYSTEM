@@ -65,9 +65,7 @@ class CareererController extends Controller
             $query->where('program_name', 'ILIKE', "%$program%");
         })
         ->get();
-
-        $programNotFound = $careers->isEmpty();
-        return view('Careerers.index', compact('careers', 'program', 'programNotFound'));
+        return view('Careerers.index', compact('careers', 'program'));
        
     }
 

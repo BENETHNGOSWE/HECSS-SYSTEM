@@ -45,31 +45,26 @@
 
     <div class="container">
         <div class="row">
-            @if(!$programNotFound)
-                @foreach ($careers as $career)
-                <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                    <div class="custom-block bg-white shadow-lg">
-                        <a href="{{ route('careerer.show', $career)}}">
-                            <div class="d-flex">
-                                <div>
-                                    <h5 class="mb-2">{{ $career->carrier_name }}</h5>
-                                </div>
-                                <span class="badge bg-design rounded-pill ms-auto">75</span>
+            @foreach ($careers as $career)
+            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                <div class="custom-block bg-white shadow-lg">
+                    <a href="{{ route('careerer.show', $career)}}">
+                        <div class="d-flex">
+                            <div>
+                                <h5 class="mb-2">{{ $career->carrier_name }}</h5>
                             </div>
-                            <img src="frontend/assets/images/topics/undraw_Redesign_feedback_re_jvm0.png" class="custom-block-image img-fluid" alt="">
-                            <div class="d-flex align-items-center">
-                                <a href="{{ route('careerer.show', $career)}}" class="btn custom-btn custom-border-btn smoothscroll">Read More</a>
-                            </div>
-                        </a>
-                    </div>
+                            <span class="badge bg-design rounded-pill ms-auto">75</span>
+                        </div>
+                        <img src="frontend/assets/images/topics/undraw_Redesign_feedback_re_jvm0.png" class="custom-block-image img-fluid" alt="">
+                        <div class="d-flex align-items-center">
+                            <a href="{{ route('careerer.show', $career)}}" class="btn custom-btn custom-border-btn smoothscroll">Read More</a>
+                        </div>
+                    </a>
                 </div>
-                @endforeach
-            @else
-                <p>No careers found for the program "{{ $program }}".</p>
-            @endif
+            </div>
+            @endforeach
         </div>
     </div>
-    
     
 </div>
 <livewire:comments :model="$career"/>
