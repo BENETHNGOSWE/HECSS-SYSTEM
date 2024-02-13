@@ -56,7 +56,7 @@ class ProgramController extends Controller
             \Log::error($th->getMessage().''.$th->getTraceAsString());
             return back()->with('error', $th->getMessage());
         }
-        return to_route('home');
+        return to_route('homepage');
     }
 
 
