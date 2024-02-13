@@ -28,7 +28,7 @@ class CareererController extends Controller
         return view('Careerers.create', $this->data);
     }
 
-    public function validate_careerer(Request $request){
+    public function validate_careerer(Request $request){  
         return $request->validate([
             'carrier_name'=> 'required',
             'career_description'=> 'required|string|max:5000',
@@ -66,8 +66,8 @@ class CareererController extends Controller
         })
         ->get();
 
-
-        return view('Careerers.index', compact('careers', 'program'));
+        $programNotFound = $careers->isEmpty();
+        return view('Careerers.index', compact('careers', 'program', 'programNotFound'));
        
     }
 
