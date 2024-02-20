@@ -6,7 +6,7 @@
 
             <div class="col-lg-5 col-12 mb-5">
 
-                <h2 class="text-white">Welcome to <br>{{ $careers->carrier_name }} Career</h2>
+                <h2 class="text-white">Welcome to <br>{{ $career->carrier_name }} Career</h2>
 
                 <div class="d-flex align-items-center mt-5">
                     <a href="#topics-detail" class="btn custom-btn custom-border-btn smoothscroll me-4">Read More</a>
@@ -31,9 +31,11 @@
         <div class="row">
 
             <div class="col-lg-8 col-12 m-auto">
-                <h3 class="mb-4">Introduction to {{ $careers->carrier_name }}</h3>
+                <h3 class="mb-4">Introduction to {{ $career->carrier_name }}</h3>
 
-                <p>{{ $careers->career_description }}</p>
+                <p>{{ $career->career_description }}</p>
+                <hr>
+                <livewire:comments :model="$career"/>
 
                 {{-- <p><strong>There are so many ways to make money online</strong>. Below are several platforms you can use to find success. Keep in mind that there is no one path everyone can take. If that were the case, everyone would have a million dollars.</p> --}}
 
@@ -56,5 +58,7 @@
 
         </div>
     </div>
+    
+    
 </section>
 @endsection

@@ -72,7 +72,7 @@ class CareererController extends Controller
     }
 
     public function show(CareerOpportunity $career_opportunities){
-        $this->data['careers'] = $career_opportunities;
+        $this->data['career'] = $career_opportunities;
         return view('Careerers.show', $this->data);
     }
 }

@@ -23,7 +23,7 @@
         </div>
     </div>
 </section><br>
-<div class="container">
+
     {{-- <table class="table">
         <thead>
             <tr>
@@ -66,7 +66,7 @@
         </div>
     </div>
     
-</div>
-<livewire:comments :model="$career"/>
+
+{{-- <livewire:comments :model="$career"/> --}}
 
 @endsection
