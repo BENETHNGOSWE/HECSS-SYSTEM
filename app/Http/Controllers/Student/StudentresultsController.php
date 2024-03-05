@@ -38,6 +38,7 @@ class StudentresultsController extends Controller
 
         // Retrieve student's grade from the database based on the student number
         $studentResult = StudentResults::where('student_number', $studentNumber)->first();
+        
     
         if (!$studentResult) {
             return redirect()->back()->with('error', 'Student result not found for the provided student number.');
@@ -48,9 +49,11 @@ class StudentresultsController extends Controller
     
         // Filter programs based on grade requirements
         $suggestedPrograms = $programs->filter(function ($program) use ($studentResult) {
+            // dd($studentResult->student_division, $program->program_division);
+
             // Compare student's grade with program grade requirements
-            // return $studentResult->student_grade >= $program->program_grade_min && $studentResult->student_grade <= $program->program_grade_max;
-            return $studentResult->student_division >= $program->program_division;
+            return $studentResult->student_grade >= $program->program_grade_min && $studentResult->student_grade <= $program->program_grade_max;
+            // return $studentResult->student_division >= $programs->program_division;
         });
     
         // Return suggested programs to the user

@@ -35,6 +35,8 @@ class ProgramController extends Controller
             'program_description'=> 'required|string|max:5000',
             'program_yearof_study'=> 'required',
             'program_division'=>'required',
+            'program_grade_min'=>'required',
+            'program_grade_max'=>'required',
             'universityID'=> 'required|exists:universities,id',
             
         ]);

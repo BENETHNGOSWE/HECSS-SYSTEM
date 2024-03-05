@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('chemistry_grade');
             $table->string('history_grade');
             $table->integer('student_grade');
-            $table->string('student_division');
+            $table->integer('student_division');
             $table->timestamps();
         });
     }

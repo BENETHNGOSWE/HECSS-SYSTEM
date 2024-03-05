@@ -23,7 +23,7 @@ class StudentResultSeeder extends Seeder
             'chemistry_grade' => 'D',
             'history_grade' => 'F',
             'student_grade' => 28,
-            'student_division' => 'IV',
+            'student_division' => 4,
         ]);
 
         StudentResults::create([
@@ -36,7 +36,7 @@ class StudentResultSeeder extends Seeder
             'chemistry_grade' => 'B',
             'history_grade' => 'A',
             'student_grade' => 12,
-            'student_division' => 'I',
+            'student_division' => 1,
         ]);
 
         StudentResults::create([
@@ -49,7 +49,7 @@ class StudentResultSeeder extends Seeder
             'chemistry_grade' => 'C',
             'history_grade' => 'B',
             'student_grade' => 18,
-            'student_division' => 'II',
+            'student_division' => 1,
         ]);
 
         StudentResults::create([
@@ -62,7 +62,7 @@ class StudentResultSeeder extends Seeder
             'chemistry_grade' => 'A',
             'history_grade' => 'B',
             'student_grade' => 7,
-            'student_division' => 'I',
+            'student_division' => 1,
         ]);
 
         StudentResults::create([
@@ -75,7 +75,7 @@ class StudentResultSeeder extends Seeder
             'chemistry_grade' => 'A',
             'history_grade' => 'C',
             'student_grade' => 24,
-            'student_division' => 'III',
+            'student_division' => 3,
         ]);
     }
 

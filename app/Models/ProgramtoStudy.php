@@ -11,17 +11,18 @@ class ProgramtoStudy extends Model
 
     use HasFactory;
     protected $fillable = [
-        "program_name",
-        "program_description",
-        "program_yearof_study",
-        "program_grade_min",
-        "program_grade_max",
-        "universityID",
+        'program_name',
+        'program_description',
+        'program_yearof_study',
+        'program_division',
+        'universityID',
+        'program_grade_min',
+        'program_grade_max',
     ];
 
-    public function career_opportunities(){
-        return $this->hasMany(CareerOpportunity::class, "program_id");
-    }
+    // public function career_opportunities(){
+    //     return $this->hasMany(CareerOpportunity::class, "program_id");
+    // }
 
     public function university()
     {

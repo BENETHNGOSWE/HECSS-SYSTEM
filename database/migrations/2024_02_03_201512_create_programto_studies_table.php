@@ -16,7 +16,9 @@ return new class extends Migration
             $table->string('program_name');
             $table->longText('program_description');
             $table->string('program_yearof_study');
-            $table->string('program_division')->nullable();
+            $table->integer('program_division')->nullable();
+            $table->integer('program_grade_min')->nullable();
+            $table->integer('program_grade_max')->nullable();
             $table->foreignId('universityID')->references('id')->on('universities')->onDelete('cascade');
             $table->timestamps();
         });

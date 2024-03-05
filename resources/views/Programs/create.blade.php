@@ -42,7 +42,17 @@
 
                             <div class="mb-3">
                                 <label for="program_division" class="form-label">Program Division</label>
-                                <input type="text" name="program_division" id="program_division" class="form-control" value="{{ old('program_division') }}" required>
+                                <input type="number" name="program_division" id="program_division" class="form-control" value="{{ old('program_division') }}" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="program_grade_min" class="form-label">Program Minimum Points</label>
+                                <input type="number" name="program_grade_min" id="program_grade_min" class="form-control" value="{{ old('program_yearof_study') }}" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="program_grade_max" class="form-label">Program Maximum Points</label>
+                                <input type="number" name="program_grade_max" id="program_grade_max" class="form-control" value="{{ old('program_yearof_study') }}" required>
                             </div>
 
                             <div class="mb-3">
